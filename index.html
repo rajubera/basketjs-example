@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="lib/basket.full.min-0.0.3.js"></script>
+    <script type="text/javascript">
+    basket
+        .require({
+            url: "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js",
+            key: 'jquery'
+        })
+        .then(function() {
+            basket.require({
+                url: "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js",
+                key: 'jqueryui'
+            })
+        }, function() {
+            //error jquery is not loaded
+        })
+    </script>
+</head>
+
+<body>
+    <h1>BasketJS Demo.</h1>
+    <p>Here we have loaded the <b>jquery</b> and <b>jquery-ui</b> into our document.  As jqueryui is  </p>
+<h2>Test:</h2>
+    <p>Open your browser console and check the network tab. You will find that second time when you load the page your javascript files are not loaded from the server.</p>
+</body>
+
+</html>
